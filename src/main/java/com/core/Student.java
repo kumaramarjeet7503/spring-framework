@@ -2,7 +2,6 @@ package com.core;
 
 public class Student {
 	private int StudentId ;
-
 	private String Address ;
 	private String Section ;
 	public int getStudentId() {

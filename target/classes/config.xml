@@ -9,16 +9,7 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd
 ">
 
-	<bean class="com.core.Student" name="student1">
-		<property name="StudentId">
-			<value>123</value>
-		</property>
-				<property name="Address">
-			<value>Lion Street Dalae</value>
-		</property>
-				<property name="Section">
-			<value>A</value>
-		</property>
-	</bean>
+	<bean class="com.core.Student" name="student1"  p:Address="dfsfsad" p:Section="fdaslfka" p:StudentId="4321" />
+
 
 </beans>
