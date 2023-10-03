@@ -2,6 +2,7 @@ package com.core;
 
 public class Student {
 	private int StudentId ;
+
 	private String Address ;
 	private String Section ;
 	public int getStudentId() {
@@ -32,6 +33,12 @@ public class Student {
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return StudentId+" "+Address+" "+Section ;
 	}
 	
 }
