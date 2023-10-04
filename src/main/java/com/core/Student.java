@@ -4,6 +4,8 @@ public class Student {
 	private int StudentId ;
 	private String Address ;
 	private String Section ;
+	private Address StudentAddress ;
+
 	public int getStudentId() {
 		return StudentId;
 	}
@@ -17,11 +19,12 @@ public class Student {
 		Address = address;
 	}
 
-	public Student(int studentId, String address, String section) {
+	public Student(int studentId, String address, String section, com.core.Address studentAddress) {
 		super();
 		StudentId = studentId;
 		Address = address;
 		Section = section;
+		StudentAddress = studentAddress;
 	}
 	public String getSection() {
 		return Section;
@@ -37,7 +40,17 @@ public class Student {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return StudentId+" "+Address+" "+Section ;
+		return StudentId+" "+Address+" "+Section+" "+StudentAddress ;
+	}
+	public Student(com.core.Address studentAddress) {
+		super();
+		StudentAddress = studentAddress;
+	}
+	public Address getStudentAddress() {
+		return StudentAddress;
+	}
+	public void setStudentAddress(Address studentAddress) {
+		StudentAddress = studentAddress;
 	}
 	
 }

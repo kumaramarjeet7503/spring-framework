@@ -34,4 +34,11 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd
 </property>
 </bean>
 
+<bean id="dataSource" class="" destroy-method ="close" >
+	<property name="driverClassName" value="" ></property>
+	<property name="url" value="" ></property>
+	<property name="username" value="root" ></property>
+	<property name="password" value="" ></property>
+</bean>
+
 </beans>
