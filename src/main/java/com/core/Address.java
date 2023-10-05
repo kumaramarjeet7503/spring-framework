@@ -77,5 +77,10 @@ public class Address {
 	public Address() {
 		
 	}
+	
+	public void init() 
+	{
+		System.out.println("Initialization has been started");
+	}
 
 }

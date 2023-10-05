@@ -10,7 +10,7 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd
 ">
 
-<bean class="com.core.Address" name="address1"  >
+<bean class="com.core.Address" name="address1" init-method="init" >
 	<constructor-arg index="0" value="4321432"  ></constructor-arg>
 	<constructor-arg  index="1" value="Delhi"  ></constructor-arg>
 	<constructor-arg index="2"  value="Mohan Garden" ></constructor-arg>
