@@ -1,9 +1,12 @@
 package com.core.wire;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Book {
 
 	private String cover ;
 	private String picture ;
+	@Autowired
 	private Page page ;
 	
 	public Book() {
