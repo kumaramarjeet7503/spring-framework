@@ -1,12 +1,14 @@
 package com.core.wire;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Book {
 
 	private String cover ;
 	private String picture ;
 	@Autowired
+	@Qualifier("page")
 	private Page page ;
 	
 	public Book() {
