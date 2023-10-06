@@ -19,8 +19,25 @@ http://www.springframework.org/schema/util/spring-util-3.0.xsd
 	<value>Siwana</value>
 </util:list>
 
+<util:map map-class="java.util.HashMap" id="feestructure" >
+	<entry key="python" value="1000" />
+	<entry key="spring" value="5000" />
+	<entry key="AWS" value="1000" />
+	<entry key="Laravel" value="3000" />
+</util:map>
+
+<util:properties id="connection" >
+	<prop key="driver"  >jdbc.driver</prop>
+	<prop key="url"  >jdbc.localhost/3306/java</prop>
+	<prop key="username"  >root</prop>
+	<prop key="password"  >jdbc</prop>
+</util:properties>
+	
+
 <bean name="person" class="com.standalone.Person" >
-	<property name="friends" ref="bestfriend"></property>
+	<property name="friends" ref="bestfriend" />
+	<property name="fees" ref="feestructure" />
+	<property name="conn" ref="connection" />
 </bean>
 
 
