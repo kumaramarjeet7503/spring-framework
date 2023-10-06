@@ -1,5 +1,7 @@
 package com.stereotype;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -9,7 +11,20 @@ public class Bulb {
 	@Value("led")
 	private String type ;
 	private String operated ;
+	@Value("#{lights}")
+	private List<String> lights ;
 	
+	
+	public List<String> getLights() {
+		return lights;
+	}
+
+
+	public void setLights(List<String> lights) {
+		this.lights = lights;
+	}
+
+
 	public String getType() {
 		return type;
 	}
@@ -18,7 +33,7 @@ public class Bulb {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "type"+type+"operated"+operated;
+		return "type = "+type+" operated = "+operated+" lights"+lights;
 	}
 
 
