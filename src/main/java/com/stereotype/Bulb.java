@@ -6,13 +6,19 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+// For creating spring bean class via annotation
 @Component
+
+// @Scopr annotation with prototype will create always new object whenever called 
 @Scope("prototype")
 public class Bulb {
 
+//	 Set value of the property
 	@Value("led")
 	private String type ;
 	private String operated ;
+	
+//	 Get value of list from config which was using util-list
 	@Value("#{lights}")
 	private List<String> lights ;
 	
