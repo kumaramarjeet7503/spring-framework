@@ -23,6 +23,18 @@ public class Bowl {
 	@Value("#{new java.lang.String('Pebbles')}")
 	public String item ;
 	
+	public boolean isActive() {
+		return isActive;
+	}
+
+//	 Conditional basis addition of value @Expression language
+	@Value("#{ 5 > 3 }")
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+
+	private boolean isActive ;
+	
 	public String getItem() {
 		return item;
 	}
@@ -78,8 +90,8 @@ public class Bowl {
 
 	@Override
 	public String toString() {
-		return "Bowl [radius=" + radius + ", volume=" + volume + ", height=" + height + ", item=" + item + ", fish="
-				+ fish + "]";
+		return "Bowl [radius=" + radius + ", volume=" + volume + ", height=" + height + ", item=" + item + ", isActive="
+				+ isActive + ", fish=" + fish + "]";
 	}
 
 
