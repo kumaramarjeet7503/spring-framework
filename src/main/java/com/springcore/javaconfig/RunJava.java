@@ -10,7 +10,10 @@ public class RunJava {
 		
 //		 Used Annotation config to use pure java class for configuration 
 		ApplicationContext context  = new AnnotationConfigApplicationContext(JavaConfig.class) ;
-		Table table = (Table) context.getBean("table") ;
+//		Table table = (Table) context.getBean("table") ;
+		
+//		 If dont want to use component scan
+		Table table = (Table) context.getBean("getTable") ;
 		
 		table.getTable();
 
