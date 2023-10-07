@@ -14,7 +14,6 @@ public class RunJava {
 		
 //		 If dont want to use component scan
 		Table table = (Table) context.getBean("table") ;
-		
 		table.getTable();
 
 	}
