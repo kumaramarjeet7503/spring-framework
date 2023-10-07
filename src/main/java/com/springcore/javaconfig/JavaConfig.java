@@ -13,10 +13,18 @@ public class JavaConfig {
 	
 //	 If not wanted to use component scan can follow this one also
 //	 In order to make a bean annotate with @Bean
-	@Bean
+//	 Change the name of table with name 
+	@Bean(name="table")
 	public Table getTable() 
 	{
-		Table table = new Table() ;
+		Table table = new Table(getLegs()) ;
 		return  table ;
+	}
+	
+	@Bean
+	public Leg getLegs() 
+	{
+		Leg leg = new Leg() ;
+		return leg ;
 	}
 }

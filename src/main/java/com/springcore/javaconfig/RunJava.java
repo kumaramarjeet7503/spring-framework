@@ -13,7 +13,7 @@ public class RunJava {
 //		Table table = (Table) context.getBean("table") ;
 		
 //		 If dont want to use component scan
-		Table table = (Table) context.getBean("getTable") ;
+		Table table = (Table) context.getBean("table") ;
 		
 		table.getTable();
 
