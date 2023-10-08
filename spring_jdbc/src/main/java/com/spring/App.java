@@ -23,9 +23,10 @@ public class App
 //		 Get demo dao via bean
 		StudentDao demoDao = context.getBean("demoDao",StudentDao.class) ;
 		
-		Demo demo = new Demo("Amarjeet","Mohan garden","A") ;
+		Demo demo = new Demo(2,"Karishma","Mohan garden","A") ;
 		
-		int studentSaved =  demoDao.insert(demo) ;
+//		int studentSaved =  demoDao.insert(demo) ;
+		int studentSaved =  demoDao.modify(demo) ;
 		System.out.println(studentSaved);
 		
     }

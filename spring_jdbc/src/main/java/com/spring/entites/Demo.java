@@ -12,6 +12,14 @@ public class Demo {
 		return name;
 	}
 
+	public Demo(int id ,String name, String address, String section) {
+		super();
+		this.name = name;
+		this.id = id ;
+		this.address = address;
+		this.section = section;
+	}
+
 
 	public Demo(String name, String address, String section) {
 		super();
