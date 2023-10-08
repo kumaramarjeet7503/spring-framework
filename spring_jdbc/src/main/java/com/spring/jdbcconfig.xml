@@ -34,5 +34,11 @@ http://www.springframework.org/schema/util/spring-util-3.0.xsd
 	</property>
 	</bean>
 
+<!--  Created bean for student dao dependency injection from bean  -->
+<bean class="com.spring.dao.StudentDaoImpl" name="demoDao">
+	<property name="jdbcTemplate" >
+	<ref bean="jdbcTemplate" />
+	</property>
+	</bean>
 
 </beans>

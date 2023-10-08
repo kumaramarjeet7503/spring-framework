@@ -1,4 +1,4 @@
-package com.spring;
+package com.spring.entites;
 
 public class Demo {
 
@@ -13,10 +13,9 @@ public class Demo {
 	}
 
 
-	public Demo(String name, int id, String address, String section) {
+	public Demo(String name, String address, String section) {
 		super();
 		this.name = name;
-		this.id = id;
 		this.address = address;
 		this.section = section;
 	}
