@@ -27,6 +27,11 @@ public class Demo {
 		this.address = address;
 		this.section = section;
 	}
+	
+	public Demo(int id ) {
+		super();
+		this.id = id ;
+	}
 
 
 	public void setName(String name) {

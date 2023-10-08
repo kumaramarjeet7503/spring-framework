@@ -6,4 +6,5 @@ import com.spring.entites.Demo;
 public interface StudentDao {
 	public int insert(Demo demo) ;
 	public int modify(Demo demo) ;
+	public int delete(Demo demo) ;
 }
