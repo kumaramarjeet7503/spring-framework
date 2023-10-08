@@ -1,6 +1,8 @@
 package com.spring.dao;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
 import com.spring.entites.*;
 
 public class StudentDaoImpl implements StudentDao {
@@ -35,6 +37,15 @@ public class StudentDaoImpl implements StudentDao {
 	public int delete(Demo demo) {
 		String query = "delete from demo where id = ?  " ;
 		int result = jdbcTemplate.update(query,demo.getId()) ;	
+		return result;
+	}
+
+	public Demo select(Demo demo) {
+		String query = "select * from demo where id = ? " ;
+		RowMapper<Demo> rowMapper = new RowMapperImpl() ;
+		
+//		 To get data for a single record
+		Demo result = jdbcTemplate.queryForObject(query,rowMapper ,demo.getId()) ;	
 		return result;
 	}
 

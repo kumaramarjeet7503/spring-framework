@@ -18,17 +18,21 @@ public class App
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbcconfig.xml") ;
 //		Get jdbc template from bean
-		JdbcTemplate template =  context.getBean("jdbcTemplate",JdbcTemplate.class) ;
+//		JdbcTemplate template =  context.getBean("jdbcTemplate",JdbcTemplate.class) ;
 		
 //		 Get demo dao via bean
 		StudentDao demoDao = context.getBean("demoDao",StudentDao.class) ;
 		
-		Demo demo = new Demo(2,"Karishma","Mohan garden","A") ;
+		Demo demo = new Demo(1,"Karishma","Mohan garden","A") ;
+
 		
-		int studentSaved =  demoDao.insert(demo) ;
-		int studentModified =  demoDao.modify(demo) ;
-		int studentDeleted = demoDao.delete(demo);
-		System.out.println(studentDeleted);
+		
+//		int studentSaved =  demoDao.insert(demo) ;
+//		int studentModified =  demoDao.modify(demo) ;
+//		int studentDeleted = demoDao.delete(demo);
+		
+		Demo demoData = demoDao.select(demo) ;
+		System.out.println(demoData);
 		
     }
 }
