@@ -31,8 +31,8 @@ public class App
 //		int studentModified =  demoDao.modify(demo) ;
 //		int studentDeleted = demoDao.delete(demo);
 		
-		Demo demoData = demoDao.select(demo) ;
-		System.out.println(demoData);
+//		Demo demoData = demoDao.select(demo) ;
+		System.out.println(demoDao.getAll());
 		
     }
 }
