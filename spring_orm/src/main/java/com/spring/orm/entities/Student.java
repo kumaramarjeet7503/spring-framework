@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+// Hibernate for making it as entity to communicate with database
 @Entity
 @Table(name="student")
 public class Student {
