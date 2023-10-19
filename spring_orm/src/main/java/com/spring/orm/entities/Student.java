@@ -85,4 +85,15 @@ public class Student {
 		
 	}
 
+	public Student(int id, String course, double duration, String city, String name) {
+		super();
+		Id = id;
+		Course = course;
+		Duration = duration;
+		City = city;
+		Name = name;
+	}
+
+
+
 }

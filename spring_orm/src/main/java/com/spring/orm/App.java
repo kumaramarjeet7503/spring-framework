@@ -16,16 +16,16 @@ public class App
         StudentDao studentDao = context.getBean("studentDao",StudentDao.class) ;
         
 //       Insert data into data table 
-        Student student = new Student("springboot",32.50,"Lonalva","surya") ;
-//        int result=  studentDao.insert(student) ;
+        Student student = new Student(2,"springboot",14.50,"Lonalva","surya") ;
+        int result=  studentDao.insert(student) ;
         
 //         Get data from database table
-//        Student student = new Student() ;
-//        student.setCity("Bardoli") ;
-//        Student dStudent = studentDao.getStudent(student) ;
+        Student student = new Student() ;
+        student.setCity("Bardoli") ;
+        Student dStudent = studentDao.getStudent(student) ;
         
 //        Delete  data from database
-        	
+        	studentDao.delete(1);
 
         
 //         Get all student list 
@@ -35,6 +35,5 @@ public class App
 //        update data in database
         studentDao.update(student) ;
         
-        System.out.println(students);
     }
 }

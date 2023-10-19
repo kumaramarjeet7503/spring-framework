@@ -47,6 +47,7 @@ public class StudentDao {
 	}
 	
 //	delete students from table
+	@Transactional
 	public void  delete(int studentId) 
 	{
 		Student student = this.hibernateTemplate.get(Student.class,studentId) ;
