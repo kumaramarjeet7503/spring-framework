@@ -75,6 +75,12 @@ public class Student {
 		Name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [Id=" + Id + ", Course=" + Course + ", Duration=" + Duration + ", City=" + City + ", Name="
+				+ Name + "]";
+	}
+
 	public Student() {
 		
 	}

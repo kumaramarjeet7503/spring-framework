@@ -1,5 +1,7 @@
 package com.spring.orm.dao;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -22,6 +24,7 @@ public class StudentDao {
 	}
 
 
+//	 Insert data into data table with hibernate template
 	@Transactional
 	public int insert(Student student) 
 	{
@@ -29,7 +32,34 @@ public class StudentDao {
 		return impactedRow ;
 	}
 	
+//	 Get student data from data table
+	public Student getStudent(int studentId) 
+	{
+		Student student = this.hibernateTemplate.get(Student.class,studentId) ;
+		return student ;
+	}
+
+	// Get list of students from database	
+	public List<Student> getAllStudent() 
+	{
+		List<Student> students = this.hibernateTemplate.loadAll(Student.class) ;
+		return students ;
+	}
 	
+//	delete students from table
+	public void  delete(int studentId) 
+	{
+		Student student = this.hibernateTemplate.get(Student.class,studentId) ;
+		 this.hibernateTemplate.delete(student) ;
+	}
+	
+//	update data in database
+//	@Transactional to resolve the issue [ Write operations are not allowed in read-only mode ]
+	@Transactional
+	public void update(Student student) 
+	{
+		 this.hibernateTemplate.update(student);
+	}
 	
 	public StudentDao() {
 		// TODO Auto-generated constructor stub
