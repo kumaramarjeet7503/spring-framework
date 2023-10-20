@@ -20,9 +20,9 @@ public class App
         int result=  studentDao.insert(student) ;
         
 //         Get data from database table
-        Student student = new Student() ;
+//        Student student = new Student() ;
         student.setCity("Bardoli") ;
-        Student dStudent = studentDao.getStudent(student) ;
+//        Student dStudent = studentDao.getStudent(student) ;
         
 //        Delete  data from database
         	studentDao.delete(1);
