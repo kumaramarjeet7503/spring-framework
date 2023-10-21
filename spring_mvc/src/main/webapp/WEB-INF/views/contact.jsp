@@ -23,17 +23,17 @@
 		</div>
 		<div class="form-group">
 				<label for="name">Name</label> <input
-					type="name" class="form-control" name="username" id="name"
+					type="name" class="form-control" name="name" id="name"
 					aria-describedby="emailHelp" placeholder="Enter name">
 			</div>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address</label> <input
-					type="email" class="form-control" name="useremail" id="exampleInputEmail1"
+					type="email" class="form-control" name="email" id="exampleInputEmail1"
 					aria-describedby="emailHelp" placeholder="Enter email"> 
 			</div>
 			<div class="form-group">
 				<label for="exampleInputPassword1">Password</label> <input
-					type="text" class="form-control" name="userpassword" id="exampleInputPassword1"
+					type="text" class="form-control" name="password" id="exampleInputPassword1"
 					placeholder="Password">
 			</div>
 			<div class="text-center">
