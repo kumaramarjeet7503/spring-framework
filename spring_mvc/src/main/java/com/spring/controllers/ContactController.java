@@ -15,6 +15,13 @@ import org.springframework.ui.Model;
 @Controller
 public class ContactController {
 
+	@ModelAttribute
+	public void commonData(Model model) 
+	{
+		model.addAttribute("header","Registeration") ;
+		model.addAttribute("description","Welcome to programming") ;
+	}
+	
 	@RequestMapping("/contact")
 	public String showForm() 
 	{
