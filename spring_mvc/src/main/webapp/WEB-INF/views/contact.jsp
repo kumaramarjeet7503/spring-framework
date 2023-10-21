@@ -17,7 +17,10 @@
 <body>
 
 	<div class="container mt-2 col-md-6">
-		<form>
+		<form action="process" method="post">
+		<div class="text-center">
+				<h2>Registeration form</h2>
+		</div>
 		<div class="form-group">
 				<label for="name">Name</label> <input
 					type="name" class="form-control" name="username" id="name"
@@ -25,16 +28,17 @@
 			</div>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address</label> <input
-					type="email" class="form-control" id="exampleInputEmail1"
+					type="email" class="form-control" name="useremail" id="exampleInputEmail1"
 					aria-describedby="emailHelp" placeholder="Enter email"> 
 			</div>
 			<div class="form-group">
 				<label for="exampleInputPassword1">Password</label> <input
-					type="text" class="form-control" id="exampleInputPassword1"
+					type="text" class="form-control" name="userpassword" id="exampleInputPassword1"
 					placeholder="Password">
 			</div>
-
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<div class="text-center">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
 		</form>
 	</div>
 
