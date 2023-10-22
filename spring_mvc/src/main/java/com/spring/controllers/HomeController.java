@@ -1,10 +1,12 @@
 package com.spring.controllers;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.ui.Model;
@@ -56,7 +58,9 @@ public class HomeController {
 	
 //	 Error handling if exception occurs 
 	@ExceptionHandler(NullPointerException.class)
-	public String nullExceptionHandler() 
+//	set configured Response status
+	@ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR)
+	public String nullExceptionHandler(Model model) 
 	{
 		return "nullPointer" ;
 	}
