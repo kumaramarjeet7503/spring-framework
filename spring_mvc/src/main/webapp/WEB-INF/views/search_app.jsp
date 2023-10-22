@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,6 +19,9 @@
 <body>
 
 	<div class="container mt-2 col-md-6">
+	
+	<img alt="" src='<c:url value="/public/image/alert.jpg" ></c:url>'>
+	
 		<form action="search" method="post">
 		<div class="text-center">
 				<h2>Seach App</h2>
