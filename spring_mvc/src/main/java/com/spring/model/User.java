@@ -1,10 +1,23 @@
 package com.spring.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="student")
 public class User {
 
+	@javax.persistence.Id
+	private int Id ;
+	
+	@Column(name="Name")
 	private String name ;
+	@Column(name="City")
 	private String email ;
+	@Column(name="Course")
 	private String password ;
+	
 	
 	public User(String name, String email, String password) {
 		super();
