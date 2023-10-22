@@ -1,6 +1,7 @@
 package com.spring.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,9 +44,10 @@ public class HomeController {
 		return modelAndView ;
 	}
 	
-	@RequestMapping("/book")
-	public RedirectView book() 
+	@RequestMapping("/book/{bookId}")
+	public RedirectView book(@PathVariable("bookId") int bookId) 
 	{
+		System.out.println(bookId);
 		RedirectView redirectView = new RedirectView() ;
 		redirectView.setUrl("help") ;
 		return redirectView ;
