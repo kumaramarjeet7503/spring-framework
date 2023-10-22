@@ -12,6 +12,7 @@ import com.spring.model.User;
 import com.spring.service.UserService;
 
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 
 
 @Controller
@@ -44,8 +45,13 @@ public class ContactController {
 //	}
 	
 	@RequestMapping(path="/process", method=RequestMethod.POST)
-	public String processForm( @ModelAttribute User user ,Model model  ) 
+	public String processForm( @ModelAttribute User user ,BindingResult result ,Model model  ) 
 	{
+//		Handling errors with binding result
+		if(result.hasErrors()) 
+		{
+			return "contact" ;
+		}
 		userService.createUser(user) ;
 				return "success" ;
 	}
