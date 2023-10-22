@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.ui.Model;
 
 // For Marking class as Controller
@@ -27,7 +28,8 @@ public class HomeController {
 	public String about() 
 	{
 		System.out.println("This is about url");
-		return "about" ;
+//		Redirect via redirect keyword 
+		return "redirect:help" ;
 	}
 	
 //	 For model and view example
@@ -40,4 +42,13 @@ public class HomeController {
 		modelAndView.setViewName("help") ;
 		return modelAndView ;
 	}
+	
+	@RequestMapping("/book")
+	public RedirectView book() 
+	{
+		RedirectView redirectView = new RedirectView() ;
+		redirectView.setUrl("help") ;
+		return redirectView ;
+	}
+	
 }
