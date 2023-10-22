@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-// Handles all controller errors
+// Handles all controller errors within spring project 
 @ControllerAdvice
 public class ExceptionHandler {
 

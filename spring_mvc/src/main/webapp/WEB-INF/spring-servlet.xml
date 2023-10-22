@@ -98,8 +98,16 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
 	<property name="sessionFactory" ref="localSessionFactory" />
 </bean> 
 
+<!-- Multipart resolver for form uploading  -->
   <bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
 </bean> 
+
+<mvc:interceptors>
+	<mvc:interceptor>
+	<mvc:mapping path="/app"/>
+		<bean class="com.spring.handler.MyInterceptor" ></bean>
+	</mvc:interceptor>
+</mvc:interceptors>
 
 
 </beans>
